@@ -6,15 +6,15 @@ export class GameNightPlayer {
     }
 
     get GameNightPlayerCardHTMLTemplate() {
-        return `
+        return /*HTML*/ `
     <div class="col-6">
     <div class="">
     <div class="p-2">
-        <h2>'${this.name}'</h2>
-        <h3>Player Score: '${this.score}'</h3>
+        <h2>${this.name}</h2>
+        <h3>Player Score: ${this.score}</h3>
         <div>
-        <button type="button">Score Increase</button>
-        <button type="button">Score Decrease</button>
+        <button onclick="app.GameNightPlayersController.increaseScore('${this.name}')" type="button">Score Increase</button>
+        <button onclick="app.GameNightPlayersController.decreaseScore('${this.name}')" type="button">Score Decrease</button>
         </div>
     </div>
     </div>

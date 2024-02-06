@@ -48,7 +48,19 @@
         </div>
       </div>
 
-      <div class="row card align-items-center">
+      <div>
+        <form onsubmit="app.PlayersController.addPlayer(event)">
+          <div>
+            <label for="name">Player Name:</label>
+            <input type="text" minlength="2" maxlength="15" name="playerName" required />
+          </div>
+          <div>
+            <button type="submit">Add Player</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="players" class="row card align-items-center">
 
         <!-- <div class="col-6">
           <div class="">
@@ -61,20 +73,7 @@
               </div>
             </div>
           </div>
-        </div> -->
-
-        <div class="col-6">
-          <div class="">
-            <div class="p-2">
-              <h2>Player HTML ONE Name Goes Here</h2>
-              <h3>Player Score: 0</h3>
-              <div>
-                <button type="button">Score Increase</button>
-                <button type="button">Score Decrease</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!-- </div> -->
 
       </div>
 
